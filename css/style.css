@@ -2341,3 +2341,503 @@ margin:0;
     margin-bottom:20px;
     display:block;
 }
+
+/* ===== TREATMENT JOURNEY TIMELINE ===== */
+.journey-section {
+    background:
+        radial-gradient(circle at 10% 18%, rgba(217, 229, 207, .72) 0 12%, transparent 13%),
+        linear-gradient(180deg, #fbfaf5 0%, #f4f7f1 100%);
+    overflow: hidden;
+    padding: 74px 0 80px;
+    position: relative;
+}
+
+.journey-section:before {
+    background: rgba(127, 150, 126, .12);
+    border-radius: 999px;
+    content: "";
+    height: 170px;
+    position: absolute;
+    right: -70px;
+    top: 38px;
+    width: 170px;
+}
+
+.journey-timeline {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    position: relative;
+    z-index: 1;
+}
+
+.journey-timeline:before {
+    background: linear-gradient(90deg, rgba(127, 150, 126, .12), #7f967e, rgba(127, 150, 126, .12));
+    content: "";
+    height: 3px;
+    left: 9%;
+    position: absolute;
+    right: 9%;
+    top: 43px;
+}
+
+.journey-step {
+    animation: journeyFloat 4.5s ease-in-out infinite;
+    background: rgba(255, 255, 255, .86);
+    border: 1px solid rgba(116, 133, 119, .16);
+    border-radius: 22px;
+    box-shadow: 0 16px 38px rgba(49, 62, 53, .08);
+    min-height: 142px;
+    padding: 22px 14px 18px;
+    position: relative;
+    text-align: center;
+}
+
+.journey-step:nth-child(2) {
+    animation-delay: .18s;
+}
+
+.journey-step:nth-child(3) {
+    animation-delay: .36s;
+}
+
+.journey-step:nth-child(4) {
+    animation-delay: .54s;
+}
+
+.journey-step:nth-child(5) {
+    animation-delay: .72s;
+}
+
+.journey-step:after {
+    color: #7f967e;
+    content: "\f063";
+    display: none;
+    font-family: FontAwesome;
+    font-size: 15px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.journey-icon {
+    align-items: center;
+    background: #7f967e;
+    border: 6px solid #eef3e9;
+    border-radius: 50%;
+    box-shadow: 0 12px 28px rgba(82, 111, 86, .22);
+    color: #fff;
+    display: inline-flex;
+    font-size: 22px;
+    height: 62px;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+    width: 62px;
+    z-index: 2;
+}
+
+.journey-step h3 {
+    color: #23352b;
+    font-size: 17px;
+    line-height: 1.25;
+    margin: 0;
+}
+
+@keyframes journeyFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@media (max-width: 991px) {
+    .journey-timeline {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .journey-timeline:before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .journey-section {
+        padding: 42px 0 50px;
+    }
+
+    .journey-section .section-heading {
+        margin-bottom: 20px;
+    }
+
+    .journey-section .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .journey-section .section-heading p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .journey-timeline {
+        gap: 0;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        max-width: 420px;
+    }
+
+    .journey-step {
+        align-items: center;
+        animation: journeyMobileIn .7s ease both, journeyGlow 3.2s ease-in-out infinite;
+        border-radius: 18px;
+        display: flex;
+        gap: 14px;
+        margin-bottom: 28px;
+        min-height: 0;
+        padding: 14px 16px;
+        text-align: left;
+    }
+
+    .journey-step:nth-child(2) {
+        animation-delay: .08s, .08s;
+    }
+
+    .journey-step:nth-child(3) {
+        animation-delay: .16s, .16s;
+    }
+
+    .journey-step:nth-child(4) {
+        animation-delay: .24s, .24s;
+    }
+
+    .journey-step:nth-child(5) {
+        animation-delay: .32s, .32s;
+        margin-bottom: 0;
+    }
+
+    .journey-step:after {
+        bottom: -22px;
+        display: block;
+    }
+
+    .journey-step:last-child:after {
+        display: none;
+    }
+
+    .journey-icon {
+        border-width: 4px;
+        flex: 0 0 auto;
+        font-size: 18px;
+        height: 50px;
+        margin: 0;
+        width: 50px;
+    }
+
+    .journey-step h3 {
+        font-size: 18px;
+    }
+}
+
+@keyframes journeyMobileIn {
+    from {
+        opacity: 0;
+        transform: translateX(-18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes journeyGlow {
+    0%, 100% {
+        box-shadow: 0 12px 26px rgba(49, 62, 53, .08);
+    }
+    50% {
+        box-shadow: 0 16px 36px rgba(82, 111, 86, .18);
+    }
+}
+
+/* ===== MOBILE HEADER + BENEFITS REFINEMENT ===== */
+@media (max-width: 768px) {
+    .home-redesign {
+        padding-top: 58px;
+    }
+
+    .site-shell {
+        overflow: visible;
+    }
+
+    .clinic-header {
+        left: 0;
+        position: fixed !important;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1005;
+    }
+
+    .clinic-nav {
+        min-height: 58px !important;
+        padding: 8px 0 !important;
+    }
+
+    .clinic-header.is-scrolled .clinic-nav {
+        min-height: 46px !important;
+        padding: 5px 0 !important;
+    }
+
+    .clinic-header.is-scrolled .clinic-brand img {
+        height: 34px !important;
+        width: 34px !important;
+    }
+
+    .clinic-header.is-scrolled .clinic-brand small {
+        display: none;
+    }
+
+    .benefits-section {
+        padding: 42px 0 48px;
+    }
+
+    .benefits-section .section-heading {
+        margin-bottom: 22px;
+    }
+
+    .benefits-section .eyebrow {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .benefits-section .section-heading h2 {
+        font-size: 30px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+
+    .benefits-section .section-heading p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .benefits-grid {
+        display: block;
+        margin-top: 0;
+    }
+
+    .benefits-grid .col-md-4,
+    .benefits-grid .col-sm-6 {
+        float: none;
+        width: 100%;
+    }
+
+    .benefit-card {
+        align-items: center;
+        background: #fff;
+        border: 1px solid rgba(116, 133, 119, .13);
+        border-radius: 22px;
+        box-shadow: 0 8px 24px rgba(49, 62, 53, .08);
+        display: flex;
+        gap: 14px;
+        height: auto;
+        margin-bottom: 16px;
+        min-height: 118px;
+        padding: 14px;
+        text-align: left;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-3px);
+    }
+
+    .benefit-card i {
+        flex: 0 0 auto;
+        font-size: 20px;
+        height: 54px;
+        line-height: 54px;
+        margin: 0;
+        width: 54px;
+    }
+
+    .benefit-card h3 {
+        font-size: 18px;
+        line-height: 1.2;
+        margin: 0 0 6px;
+    }
+
+    .benefit-card p {
+        font-size: 13px;
+        line-height: 1.45;
+        margin: 0;
+    }
+}
+
+/* ===== HERO TEXT ANIMATION + SERVICE MOBILE FIXES ===== */
+.hero-animated-title,
+.hero-animated-text {
+    opacity: 0;
+}
+
+.hero-animated-title {
+    animation: heroTitleReveal .85s cubic-bezier(.2, .75, .25, 1) .15s forwards;
+}
+
+.hero-animated-text {
+    animation: heroTextReveal .85s cubic-bezier(.2, .75, .25, 1) .42s forwards;
+}
+
+@keyframes heroTitleReveal {
+    from {
+        filter: blur(8px);
+        letter-spacing: .02em;
+        opacity: 0;
+        transform: translateY(18px) scale(.98);
+    }
+    to {
+        filter: blur(0);
+        letter-spacing: 0;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes heroTextReveal {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding-top: 16px !important;
+    }
+
+    .services-section .mobile-wave {
+        display: none !important;
+    }
+
+    .services-section .section-heading {
+        margin-bottom: 16px !important;
+    }
+
+    .services-section .section-heading .eyebrow {
+        margin-bottom: 8px;
+    }
+
+    .service-grid .col-md-3,
+    .service-grid .col-sm-6 {
+        padding-top: 0 !important;
+    }
+
+    .service-card {
+        min-height: 112px !important;
+    }
+
+    .service-card img {
+        background: #eef3e9;
+        border: 1px solid rgba(127, 150, 126, .12);
+        height: 92px !important;
+        min-width: 92px !important;
+        object-fit: cover !important;
+        width: 92px !important;
+    }
+
+    .service-card img[src$=".png"] {
+        object-fit: contain !important;
+        padding: 4px;
+    }
+
+    .service-card h3 {
+        font-size: 18px !important;
+        line-height: 1.18 !important;
+    }
+
+    .service-card p {
+        font-size: 13px !important;
+        line-height: 1.42 !important;
+    }
+
+    .journey-section {
+        padding-bottom: 26px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefit-card > i {
+        align-items: center !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        line-height: 1 !important;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+
+    .benefit-card > i:before {
+        display: block;
+        line-height: 1;
+        margin: 0;
+    }
+}
+
+/* ===== HEADER WHATSAPP ACTION ===== */
+.header-actions {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.header-whatsapp {
+    align-items: center;
+    background: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 8px 18px rgba(37, 211, 102, .25);
+    color: #fff !important;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-size: 18px;
+    height: 38px;
+    justify-content: center;
+    width: 38px;
+}
+
+.header-whatsapp:hover,
+.header-whatsapp:focus {
+    background: #1fb85a;
+    color: #fff !important;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .header-actions {
+        flex: 0 0 auto;
+        gap: 7px;
+    }
+
+    .header-whatsapp {
+        height: 34px;
+        width: 34px;
+    }
+
+    .clinic-header.is-scrolled .header-whatsapp {
+        height: 31px;
+        width: 31px;
+    }
+
+    .mobile-menu-toggle.active {
+        position: static !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-whatsapp {
+        display: none;
+    }
+}

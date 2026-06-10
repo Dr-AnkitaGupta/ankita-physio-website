@@ -329,7 +329,7 @@ label { }
 /*--------------------------
     5.2 Navigations Regular
    ----------------------------*/
-.hero-section { padding-top: 135px; padding-bottom: 135px; background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(../images/hero.jpg) no-repeat center; background-size: cover; }
+.hero-section { padding-top: 135px; padding-bottom: 135px; background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(../images/home-physiotherapy-gwalior-dr-ankita-gupta.webp) no-repeat center; background-size: cover; }
 .hero-caption { padding-top: 100px; padding-bottom: 100px; }
 .hero-title { font-size: 46px; color: #fff; line-height: 50px; font-weight: 600; margin-bottom: 30px; letter-spacing: -1px; }
 .hero-text { font-size: 18px; color: #fff; margin-bottom: 30px; }
@@ -414,7 +414,7 @@ box-shadow: 0px 2px 6px 0px rgba(230,230,230,1);}
 /*----------------------------------------------
     5.4 Page Header
 ----------------------------------------------*/
-.page-header { background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(../images/IMG1.jpg) no-repeat center; background-size: cover; margin: 0; border-bottom: none; padding-bottom: 100px; }
+.page-header { background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(../images/physiotherapy-care-gwalior.webp) no-repeat center; background-size: cover; margin: 0; border-bottom: none; padding-bottom: 100px; }
 .page-caption { padding: 90px 0px; position: relative; z-index: 1; color: #fff; }
 .page-title { color: #fff; text-align: left; font-size: 40px; font-weight: 400; letter-spacing: -1px; }
 .breadcrumb { }
@@ -699,7 +699,7 @@ ul.widget-recent-post { }
 /*--------------------------------
  Extra Plugin CSS - Back to top  
 ---------------------------------*/
-.cd-top { display: inline-block; height: 40px; width: 40px; position: fixed; bottom: 40px; right: 10px; overflow: hidden; text-indent: 100%; white-space: nowrap; background: rgba(212, 27, 44, 100) url(../images/cd-top-arrow.svg) no-repeat center 50%; visibility: hidden; opacity: 0; -webkit-transition: opacity .3s 0s, visibility 0s .3s; -moz-transition: opacity .3s 0s, visibility 0s .3s; transition: opacity .3s 0s, visibility 0s .3s; }
+.cd-top { display: inline-block; height: 40px; width: 40px; position: fixed; bottom: 40px; right: 10px; overflow: hidden; text-indent: 100%; white-space: nowrap; background: rgba(212, 27, 44, 100); visibility: hidden; opacity: 0; -webkit-transition: opacity .3s 0s, visibility 0s .3s; -moz-transition: opacity .3s 0s, visibility 0s .3s; transition: opacity .3s 0s, visibility 0s .3s; }
 .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover { -webkit-transition: opacity .3s 0s, visibility 0s 0s; -moz-transition: opacity .3s 0s, visibility 0s 0s; transition: opacity .3s 0s, visibility 0s 0s; }
 .cd-top.cd-is-visible {    /* the button becomes visible */
 visibility: visible; opacity: 1; }
@@ -1265,7 +1265,7 @@ opacity: .5; }
     align-items: center;
     background:
         linear-gradient(135deg, rgba(226, 239, 221, .95), rgba(246, 238, 224, .96)),
-        url(../images/service-single.jpg) center/cover;
+        url(../images/physiotherapy-service-detail-gwalior.webp) center/cover;
     border-radius: 28px;
     box-shadow: 0 26px 64px rgba(48, 61, 52, .14);
     display: flex;
